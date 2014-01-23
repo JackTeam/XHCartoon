@@ -149,7 +149,7 @@ typedef NS_ENUM(NSInteger, XHCartoonType) {
     [self _setupViewFrame:gridButtonFrame inView:_gridButton];
     [_gridButton addTarget:self action:@selector(_pushNewViewController:) forControlEvents:UIControlEventTouchUpInside];
     _gridButton.tag = kXHGridPuzzle;
-    [_gridButton setImage:[UIImage imageNamed:@"meicon.png"] imagePosition:kXHHorizontalDirection withTitle:NSLocalizedString(@"四格拼图", @"四格拼图") forState:UIControlStateNormal];
+    [_gridButton setImage:[UIImage imageNamed:@"meicon.png"] imagePosition:kXHHorizontalDirection withTitle:NSLocalizedString(@"关于我们", @"关于我们") forState:UIControlStateNormal];
     [_gridButton setBackgroundImage:[UIImage imageNamed:@"MenuBackground"] forState:UIControlStateNormal];
     
     self.videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -157,7 +157,7 @@ typedef NS_ENUM(NSInteger, XHCartoonType) {
     [self _setupViewFrame:videoButtonFrame inView:_videoButton];
     [_videoButton addTarget:self action:@selector(_pushNewViewController:) forControlEvents:UIControlEventTouchUpInside];
     _videoButton.tag = kXHCartoonVideo;
-    [_videoButton setImage:[UIImage imageNamed:@"meicon.png"] imagePosition:kXHHorizontalDirection withTitle:NSLocalizedString(@"漫画视频", @"漫画视频") forState:UIControlStateNormal];
+    [_videoButton setImage:[UIImage imageNamed:@"meicon.png"] imagePosition:kXHHorizontalDirection withTitle:NSLocalizedString(@"关于我们", @"关于我们") forState:UIControlStateNormal];
     [_videoButton setBackgroundImage:[UIImage imageNamed:@"MenuBackground"] forState:UIControlStateNormal];
     
     [_containarView addSubview:self.cameraButton];
