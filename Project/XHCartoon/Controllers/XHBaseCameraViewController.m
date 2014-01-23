@@ -65,14 +65,14 @@
 
 #pragma mark - Life cycle
 
-- (void)_setup {
+- (void)_setupBase {
     self.itemWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) / 5.0;
 }
 
 - (id)init {
     self = [super init];
     if (self) {
-        [self _setup];
+        [self _setupBase];
     }
     return self;
 }

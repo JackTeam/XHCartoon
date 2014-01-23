@@ -8,11 +8,20 @@
 
 #import "XHCartoonCameraViewController.h"
 
+#import "XHPhotoEditorViewController.h"
+
 @interface XHCartoonCameraViewController ()
 
 @end
 
 @implementation XHCartoonCameraViewController
+
+#pragma mark - Action
+
+- (void)_pushPhotoEditorViewController {
+    XHPhotoEditorViewController *photoEditorViewController = [[XHPhotoEditorViewController alloc] init];
+    [self.navigationController pushViewController:photoEditorViewController animated:YES];
+}
 
 #pragma mark - Setup UI
 
@@ -34,6 +43,7 @@
     [items addObject:libraryItem];
     
     XHItem *capturePhotoItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
+        [weakSelf _pushPhotoEditorViewController];
         NSLog(@"index : %d", itemView.item.index);
     }];
     [items addObject:capturePhotoItem];
