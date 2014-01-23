@@ -184,41 +184,6 @@ typedef NS_ENUM(NSInteger, XHCartoonType) {
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self _animationUI];
-    
-    NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:5];
-    XHItem *bottomModel1 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        
-    }];
-    [items addObject:bottomModel1];
-    
-    XHItem *bottomModel2 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        
-    }];
-    [items addObject:bottomModel2];
-    
-    XHItem *bottomModel3 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        
-    }];
-    [items addObject:bottomModel3];
-    
-    XHItem *bottomModel4 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
-    }];
-    [items addObject:bottomModel4];
-    
-    XHItem *bottomModel5 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:@"title5" itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
-    }];
-    [items addObject:bottomModel5];
-    
-    XHItemScrollToolBar *bottomItemToolBar = [[XHItemScrollToolBar alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - 44, CGRectGetWidth(self.view.bounds), 44)];
-    bottomItemToolBar.itemWidth = CGRectGetWidth(self.view.bounds) / 5.0;
-    bottomItemToolBar.itemPaddingX = 10;
-    bottomItemToolBar.itemPaddingY = 5;
-    bottomItemToolBar.items = items;
-    [self.view addSubview:bottomItemToolBar];
-    
-    [bottomItemToolBar reloadData];
 }
 
 - (void)viewDidLoad
