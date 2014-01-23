@@ -8,11 +8,20 @@
 
 #import "XHPhotoEditorViewController.h"
 
+#import "XHShareViewController.h"
+
 @interface XHPhotoEditorViewController ()
 
 @end
 
 @implementation XHPhotoEditorViewController
+
+#pragma mark - Action
+
+- (void)_pushXHShareViewController {
+    XHShareViewController *shareViewController = [[XHShareViewController alloc] init];
+    [self.navigationController pushViewController:shareViewController animated:YES];
+}
 
 #pragma mark - Setup UI
 
@@ -44,6 +53,7 @@
     [items addObject:dialogBoxItem];
     
     XHItem *gotoNextSetpItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:@"title5" itemSelectedBlcok:^(XHItemView *itemView) {
+        [weakSelf _pushXHShareViewController];
         NSLog(@"index : %d", itemView.item.index);
     }];
     [items addObject:gotoNextSetpItem];
