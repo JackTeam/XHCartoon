@@ -7,6 +7,7 @@
 //
 
 #import "XHBaseCameraViewController.h"
+#import "XHItemScrollToolBar.h"
 
 @interface XHBaseCameraViewController ()
 
@@ -34,18 +35,36 @@
     _scenesCategirys = scenesCategirys;
 }
 
-- (void)setItemViews:(NSArray *)itemViews {
-    if (!itemViews)
+- (void)setItemViews:(NSArray *)items {
+    if (!items)
         return;
-    _itemViews = itemViews;
+    _items = items;
+    [self _setupBottomToolBar];
+}
+
+#pragma mark - UI Setup
+
+- (void)_setupBottomToolBar {
+    XHItemScrollToolBar *bottomItemToolBar = [[XHItemScrollToolBar alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - 44, CGRectGetWidth(self.view.bounds), 44)];
+    bottomItemToolBar.itemWidth = self.itemWidth;
+    bottomItemToolBar.itemPaddingX = self.itemPaddingX;
+    bottomItemToolBar.itemPaddingY = self.itemPaddingY;
+    bottomItemToolBar.items = self.items;
+    [self.view addSubview:bottomItemToolBar];
+    
+    [bottomItemToolBar reloadData];
 }
 
 #pragma mark - Life cycle
 
+- (void)_setup {
+    self.itemWidth = CGRectGetWidth(self.view.bounds) / 5.0;
+}
+
 - (id)init {
     self = [super init];
     if (self) {
-        
+        [self _setup];
     }
     return self;
 }

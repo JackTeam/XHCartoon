@@ -16,5 +16,10 @@
 // 各种场景分类
 @property (nonatomic, strong) NSArray *scenesCategirys;
 // 底部按钮
-@property (nonatomic, strong) NSArray *itemViews;
+@property (nonatomic, strong) NSArray *items;
+// 底部的样式
+@property (nonatomic, assign) CGFloat itemWidth;
+@property (nonatomic, assign) CGFloat itemPaddingX;
+@property (nonatomic, assign) CGFloat itemPaddingY;
+@property (nonatomic, assign) NSInteger selectIndex;
 @end
