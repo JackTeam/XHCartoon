@@ -13,6 +13,7 @@
 @end
 
 @implementation XHBaseCameraViewController
+@synthesize items = _items;
 
 #pragma mark - Propertys
 
@@ -34,30 +35,38 @@
     _scenesCategirys = scenesCategirys;
 }
 
-- (void)setItemViews:(NSArray *)items {
+- (void)setItems:(NSArray *)items {
     if (!items)
         return;
     _items = items;
     [self _setupBottomToolBar];
 }
 
+- (NSArray *)items {
+    if (!_items) {
+        _items = [[NSArray alloc] init];
+    }
+    return _items;
+}
+
 #pragma mark - UI Setup
 
 - (void)_setupBottomToolBar {
-    XHItemScrollToolBar *bottomItemToolBar = [[XHItemScrollToolBar alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - 44, CGRectGetWidth(self.view.bounds), 44)];
-    bottomItemToolBar.itemWidth = self.itemWidth;
-    bottomItemToolBar.itemPaddingX = self.itemPaddingX;
-    bottomItemToolBar.itemPaddingY = self.itemPaddingY;
-    bottomItemToolBar.items = self.items;
-    [self.view addSubview:bottomItemToolBar];
+    XHItemScrollToolBar *itemScrollToolBar = [[XHItemScrollToolBar alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - 44, CGRectGetWidth(self.view.bounds), 44)];
+    itemScrollToolBar.itemWidth = self.itemWidth;
+    itemScrollToolBar.itemPaddingX = self.itemPaddingX;
+    itemScrollToolBar.itemPaddingY = self.itemPaddingY;
+    itemScrollToolBar.items = self.items;
+    itemScrollToolBar.selectIndex = self.selectIndex;
+    [self.view addSubview:itemScrollToolBar];
     
-    [bottomItemToolBar reloadData];
+    [itemScrollToolBar reloadData];
 }
 
 #pragma mark - Life cycle
 
 - (void)_setup {
-    self.itemWidth = CGRectGetWidth(self.view.bounds) / 5.0;
+    
 }
 
 - (id)init {
@@ -72,6 +81,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor grayColor];
 }
 
 - (void)didReceiveMemoryWarning

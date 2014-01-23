@@ -17,10 +17,13 @@
 #pragma mark - Setup UI
 
 - (void)_setupItemScrollToolBar {
-    if (self.items)
+    if (self.items.count)
         return;
+    
+    __weak typeof(self) weakSelf = self;
     NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:5];
     XHItem *bottomModel1 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
         NSLog(@"index : %d", itemView.item.index);
     }];
     [items addObject:bottomModel1];
@@ -45,13 +48,13 @@
     }];
     [items addObject:bottomModel5];
     self.items = items;
-    items = nil;
 }
 
 #pragma mark - Life cycle
 
 - (void)_setup {
-    
+    self.itemWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) / 5.0;
+    self.selectIndex = 4;
 }
 
 - (id)init {
@@ -66,6 +69,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
     [self _setupItemScrollToolBar];
 }
 
