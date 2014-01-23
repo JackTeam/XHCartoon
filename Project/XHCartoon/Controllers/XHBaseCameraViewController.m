@@ -14,11 +14,12 @@
 
 @implementation XHBaseCameraViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+#pragma mark - Life cycle
+
+- (id)init {
+    self = [super init];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
