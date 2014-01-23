@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSArray *scenes;
 // 各种场景分类
 @property (nonatomic, strong) NSArray *scenesCategirys;
+// 底部按钮
+@property (nonatomic, strong) NSArray *itemViews;
 @end

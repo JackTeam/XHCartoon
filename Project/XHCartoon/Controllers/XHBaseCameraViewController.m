@@ -34,6 +34,12 @@
     _scenesCategirys = scenesCategirys;
 }
 
+- (void)setItemViews:(NSArray *)itemViews {
+    if (!itemViews)
+        return;
+    _itemViews = itemViews;
+}
+
 #pragma mark - Life cycle
 
 - (id)init {
