@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XHBaseCameraViewController : UIViewController
+@interface XHBaseCameraViewController : XHBaseViewController
 // 各种滤镜
 @property (nonatomic, strong) NSArray *filters;
 // 各种场景
