@@ -59,6 +59,7 @@
 		ABEBD7E1189167BC005D3DA7 /* XHPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */; };
 		ABEBD7E418916A90005D3DA7 /* XHShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */; };
 		ABEBD7E718916B5C005D3DA7 /* XHEaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */; };
+		ABEBD7EA18916BA1005D3DA7 /* XHFilterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E918916BA1005D3DA7 /* XHFilterItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,8 @@
 		ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareViewController.m; sourceTree = "<group>"; };
 		ABEBD7E518916B5C005D3DA7 /* XHEaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEaseTableView.h; sourceTree = "<group>"; };
 		ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEaseTableView.m; sourceTree = "<group>"; };
+		ABEBD7E818916BA1005D3DA7 /* XHFilterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFilterItem.h; sourceTree = "<group>"; };
+		ABEBD7E918916BA1005D3DA7 /* XHFilterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFilterItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +313,8 @@
 			children = (
 				ABEBD7E518916B5C005D3DA7 /* XHEaseTableView.h */,
 				ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */,
+				ABEBD7E818916BA1005D3DA7 /* XHFilterItem.h */,
+				ABEBD7E918916BA1005D3DA7 /* XHFilterItem.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEBD7EA18916BA1005D3DA7 /* XHFilterItem.m in Sources */,
 				ABEBD7E1189167BC005D3DA7 /* XHPhotoEditorViewController.m in Sources */,
 				AB34F28C18915872005E030B /* AppDelegate.m in Sources */,
 				AB34F2B8189158BC005E030B /* XHItemView.m in Sources */,
