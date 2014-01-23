@@ -57,7 +57,7 @@
 		AB34F30818915CF4005E030B /* XHBaseCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */; };
 		ABEBD7DE18916227005D3DA7 /* XHCartoonCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */; };
 		ABEBD7E1189167BC005D3DA7 /* XHPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */; };
-		ABEBD7E418916A90005D3DA7 /* XHShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */; };
+		ABEBD7E418916A90005D3DA7 /* XHShareAndSvaePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E318916A90005D3DA7 /* XHShareAndSvaePhotoViewController.m */; };
 		ABEBD7E718916B5C005D3DA7 /* XHEaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */; };
 		ABEBD7EA18916BA1005D3DA7 /* XHFilterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E918916BA1005D3DA7 /* XHFilterItem.m */; };
 /* End PBXBuildFile section */
@@ -138,8 +138,8 @@
 		ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCartoonCameraViewController.m; sourceTree = "<group>"; };
 		ABEBD7DF189167BC005D3DA7 /* XHPhotoEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotoEditorViewController.h; sourceTree = "<group>"; };
 		ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotoEditorViewController.m; sourceTree = "<group>"; };
-		ABEBD7E218916A90005D3DA7 /* XHShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareViewController.h; sourceTree = "<group>"; };
-		ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareViewController.m; sourceTree = "<group>"; };
+		ABEBD7E218916A90005D3DA7 /* XHShareAndSvaePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareAndSvaePhotoViewController.h; sourceTree = "<group>"; };
+		ABEBD7E318916A90005D3DA7 /* XHShareAndSvaePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareAndSvaePhotoViewController.m; sourceTree = "<group>"; };
 		ABEBD7E518916B5C005D3DA7 /* XHEaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEaseTableView.h; sourceTree = "<group>"; };
 		ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEaseTableView.m; sourceTree = "<group>"; };
 		ABEBD7E818916BA1005D3DA7 /* XHFilterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFilterItem.h; sourceTree = "<group>"; };
@@ -287,8 +287,8 @@
 				ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */,
 				ABEBD7DF189167BC005D3DA7 /* XHPhotoEditorViewController.h */,
 				ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */,
-				ABEBD7E218916A90005D3DA7 /* XHShareViewController.h */,
-				ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */,
+				ABEBD7E218916A90005D3DA7 /* XHShareAndSvaePhotoViewController.h */,
+				ABEBD7E318916A90005D3DA7 /* XHShareAndSvaePhotoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 				AB34F28C18915872005E030B /* AppDelegate.m in Sources */,
 				AB34F2B8189158BC005E030B /* XHItemView.m in Sources */,
 				AB34F2BF18915AEC005E030B /* XHCartoon.xcdatamodeld in Sources */,
-				ABEBD7E418916A90005D3DA7 /* XHShareViewController.m in Sources */,
+				ABEBD7E418916A90005D3DA7 /* XHShareAndSvaePhotoViewController.m in Sources */,
 				AB34F2C718915B29005E030B /* XHBaseViewController.m in Sources */,
 				AB34F28818915872005E030B /* main.m in Sources */,
 				AB34F2C618915B29005E030B /* XHCustomNavigationController.m in Sources */,

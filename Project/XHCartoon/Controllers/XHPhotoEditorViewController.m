@@ -8,7 +8,7 @@
 
 #import "XHPhotoEditorViewController.h"
 
-#import "XHShareViewController.h"
+#import "XHShareAndSvaePhotoViewController.h"
 
 @interface XHPhotoEditorViewController ()
 
@@ -19,7 +19,7 @@
 #pragma mark - Action
 
 - (void)_pushXHShareViewController {
-    XHShareViewController *shareViewController = [[XHShareViewController alloc] init];
+    XHShareAndSvaePhotoViewController *shareViewController = [[XHShareAndSvaePhotoViewController alloc] init];
     [self.navigationController pushViewController:shareViewController animated:YES];
 }
 

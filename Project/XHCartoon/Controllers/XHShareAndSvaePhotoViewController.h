@@ -1,5 +1,5 @@
 //
-//  XHShareViewController.h
+//  XHShareAndSvaePhotoViewController.h
 //  XHCartoon
 //
 //  Created by 曾 宪华 on 14-1-23.
@@ -8,6 +8,6 @@
 
 #import "XHBaseViewController.h"
 
-@interface XHShareViewController : XHBaseViewController
+@interface XHShareAndSvaePhotoViewController : XHBaseViewController
 
 @end
