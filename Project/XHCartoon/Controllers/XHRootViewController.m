@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, XHCartoonType) {
     XHCartoonType currentCartoonType = sender.tag;
     switch (currentCartoonType) {
         case kXHCartoonCamera:
-            newViewController = [[NSClassFromString(@"XHCameraViewController") alloc] init];
+            newViewController = [[NSClassFromString(@"XHCartoonCameraViewController") alloc] init];
             break;
         case kXHGridPuzzle:
             newViewController = [[NSClassFromString(@"XHGridPuzzleViewController") alloc] init];
