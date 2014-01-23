@@ -23,6 +23,10 @@
     [self.navigationController pushViewController:photoEditorViewController animated:YES];
 }
 
+- (void)_filterItemSelect:(NSInteger)index {
+    NSLog(@"index : %d", index);
+}
+
 #pragma mark - Setup UI
 
 - (void)_setupItemScrollToolBar {
@@ -49,12 +53,16 @@
     [items addObject:capturePhotoItem];
     
     XHItem *scenesItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
+        NSInteger index = itemView.item.index;
+        NSLog(@"index : %d", index);
+        [weakSelf _filterEdting:index - 3];
     }];
     [items addObject:scenesItem];
     
     XHItem *filterItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:@"title5" itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
+        NSInteger index = itemView.item.index;
+        NSLog(@"index : %d", index);
+        [weakSelf _filterEdting:index - 3];
     }];
     [items addObject:filterItem];
     self.items = items;

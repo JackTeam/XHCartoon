@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "XHItemView.h"
 
+#define kXHItemScrollToolBarHeight 60
+
 @interface XHItemScrollToolBar : UIScrollView
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, assign) CGFloat itemWidth;

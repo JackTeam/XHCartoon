@@ -23,6 +23,48 @@
     [self.navigationController pushViewController:shareViewController animated:YES];
 }
 
+- (void)_filterItemSelect:(NSInteger)index {
+    NSLog(@"index : %d", index);
+}
+
+- (UIImage *)_getImageForIndex:(NSInteger )index {
+    NSString *imageName = nil;
+    UIImage *filterImage = nil;
+    switch (self.cameraType) {
+        case kXHSceces: {
+            imageName = [NSString stringWithFormat:@"Sceces%d", index];
+            break;
+        }
+        case kXHFilter: {
+            imageName = [NSString stringWithFormat:@"Filter%d", index];
+            break;
+        }
+        default:
+            break;
+    }
+    filterImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:imageName ofType:@"png"]];
+    return filterImage;
+}
+
+- (NSString *)_getTextForIndex:(NSInteger)index {
+    switch (self.cameraType) {
+        case kXHSceces:
+            return @"漫画场景";
+            break;
+        case kXHFilter:
+            return @"漫画布景";
+            break;
+        case kXHElements:
+            return @"漫画元素";
+            break;
+        case kXHDialogBox:
+            return @"对话框";
+            break;
+        default:
+            break;
+    }
+}
+
 #pragma mark - Setup UI
 
 - (void)_setupItemScrollToolBar {
@@ -38,17 +80,23 @@
     [items addObject:backToRootItem];
     
     XHItem *scenesItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
+        NSInteger index = itemView.item.index;
+        NSLog(@"index : %d", index);
+        [weakSelf _filterEdting:index - 1];
     }];
     [items addObject:scenesItem];
     
     XHItem *elementsItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
+        NSInteger index = itemView.item.index;
+        NSLog(@"index : %d", index);
+        [weakSelf _filterEdting:index];
     }];
     [items addObject:elementsItem];
     
     XHItem *dialogBoxItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
-        NSLog(@"index : %d", itemView.item.index);
+        NSInteger index = itemView.item.index;
+        NSLog(@"index : %d", index);
+        [weakSelf _filterEdting:index];
     }];
     [items addObject:dialogBoxItem];
     
