@@ -58,6 +58,7 @@
 		ABEBD7DE18916227005D3DA7 /* XHCartoonCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */; };
 		ABEBD7E1189167BC005D3DA7 /* XHPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */; };
 		ABEBD7E418916A90005D3DA7 /* XHShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */; };
+		ABEBD7E718916B5C005D3DA7 /* XHEaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,8 @@
 		ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotoEditorViewController.m; sourceTree = "<group>"; };
 		ABEBD7E218916A90005D3DA7 /* XHShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareViewController.h; sourceTree = "<group>"; };
 		ABEBD7E318916A90005D3DA7 /* XHShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareViewController.m; sourceTree = "<group>"; };
+		ABEBD7E518916B5C005D3DA7 /* XHEaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEaseTableView.h; sourceTree = "<group>"; };
+		ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEaseTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +308,8 @@
 		AB34F2BE18915AEC005E030B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ABEBD7E518916B5C005D3DA7 /* XHEaseTableView.h */,
+				ABEBD7E618916B5C005D3DA7 /* XHEaseTableView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				AB34F2D018915B9E005E030B /* UIButton+XHImageTextPosition.m in Sources */,
 				AB34F2D118915B9E005E030B /* UIDevice+XHDevices.m in Sources */,
 				AB34F30818915CF4005E030B /* XHBaseCameraViewController.m in Sources */,
+				ABEBD7E718916B5C005D3DA7 /* XHEaseTableView.m in Sources */,
 				AB34F2C818915B29005E030B /* XHRootViewController.m in Sources */,
 				AB34F2B7189158BC005E030B /* XHItemScrollToolBar.m in Sources */,
 			);
