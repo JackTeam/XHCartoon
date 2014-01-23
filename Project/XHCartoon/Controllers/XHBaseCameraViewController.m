@@ -14,6 +14,26 @@
 
 @implementation XHBaseCameraViewController
 
+#pragma mark - Propertys
+
+- (void)setFilters:(NSArray *)filters {
+    if (!filters)
+        return;
+    _filters = filters;
+}
+
+- (void)setScenes:(NSArray *)scenes {
+    if (!scenes)
+        return;
+    _scenes = scenes;
+}
+
+- (void)setScenesCategirys:(NSArray *)scenesCategirys {
+    if (!scenesCategirys)
+        return;
+    _scenesCategirys = scenesCategirys;
+}
+
 #pragma mark - Life cycle
 
 - (id)init {

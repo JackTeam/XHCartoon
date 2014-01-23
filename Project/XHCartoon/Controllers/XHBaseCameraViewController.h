@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface XHBaseCameraViewController : UIViewController
-
+// 各种滤镜
+@property (nonatomic, strong) NSArray *filters;
+// 各种场景
+@property (nonatomic, strong) NSArray *scenes;
+// 各种场景分类
+@property (nonatomic, strong) NSArray *scenesCategirys;
 @end
