@@ -7,7 +7,6 @@
 //
 
 #import "XHBaseCameraViewController.h"
-#import "XHItemScrollToolBar.h"
 
 @interface XHBaseCameraViewController ()
 

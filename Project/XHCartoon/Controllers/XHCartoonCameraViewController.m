@@ -14,6 +14,40 @@
 
 @implementation XHCartoonCameraViewController
 
+#pragma mark - Setup UI
+
+- (void)_setupItemScrollToolBar {
+    if (self.items)
+        return;
+    NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:5];
+    XHItem *bottomModel1 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
+        NSLog(@"index : %d", itemView.item.index);
+    }];
+    [items addObject:bottomModel1];
+    
+    XHItem *bottomModel2 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
+        NSLog(@"index : %d", itemView.item.index);
+    }];
+    [items addObject:bottomModel2];
+    
+    XHItem *bottomModel3 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
+        NSLog(@"index : %d", itemView.item.index);
+    }];
+    [items addObject:bottomModel3];
+    
+    XHItem *bottomModel4 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
+        NSLog(@"index : %d", itemView.item.index);
+    }];
+    [items addObject:bottomModel4];
+    
+    XHItem *bottomModel5 = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:@"title5" itemSelectedBlcok:^(XHItemView *itemView) {
+        NSLog(@"index : %d", itemView.item.index);
+    }];
+    [items addObject:bottomModel5];
+    self.items = items;
+    items = nil;
+}
+
 #pragma mark - Life cycle
 
 - (void)_setup {
@@ -32,6 +66,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self _setupItemScrollToolBar];
 }
 
 - (void)didReceiveMemoryWarning

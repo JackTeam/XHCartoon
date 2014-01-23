@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHItemScrollToolBar.h"
 
 @interface XHBaseCameraViewController : XHBaseViewController
 // 各种滤镜
