@@ -56,6 +56,7 @@
 		AB34F30518915BE9005E030B /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB34F2EE18915BE9005E030B /* MenuBackground@2x.png */; };
 		AB34F30818915CF4005E030B /* XHBaseCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */; };
 		ABEBD7DE18916227005D3DA7 /* XHCartoonCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */; };
+		ABEBD7E1189167BC005D3DA7 /* XHPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,8 @@
 		AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCameraViewController.m; sourceTree = "<group>"; };
 		ABEBD7DC18916227005D3DA7 /* XHCartoonCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCartoonCameraViewController.h; sourceTree = "<group>"; };
 		ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCartoonCameraViewController.m; sourceTree = "<group>"; };
+		ABEBD7DF189167BC005D3DA7 /* XHPhotoEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotoEditorViewController.h; sourceTree = "<group>"; };
+		ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotoEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +276,8 @@
 				AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */,
 				ABEBD7DC18916227005D3DA7 /* XHCartoonCameraViewController.h */,
 				ABEBD7DD18916227005D3DA7 /* XHCartoonCameraViewController.m */,
+				ABEBD7DF189167BC005D3DA7 /* XHPhotoEditorViewController.h */,
+				ABEBD7E0189167BC005D3DA7 /* XHPhotoEditorViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEBD7E1189167BC005D3DA7 /* XHPhotoEditorViewController.m in Sources */,
 				AB34F28C18915872005E030B /* AppDelegate.m in Sources */,
 				AB34F2B8189158BC005E030B /* XHItemView.m in Sources */,
 				AB34F2BF18915AEC005E030B /* XHCartoon.xcdatamodeld in Sources */,

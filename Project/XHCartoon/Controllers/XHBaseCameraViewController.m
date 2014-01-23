@@ -66,7 +66,7 @@
 #pragma mark - Life cycle
 
 - (void)_setup {
-    
+    self.itemWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) / 5.0;
 }
 
 - (id)init {
