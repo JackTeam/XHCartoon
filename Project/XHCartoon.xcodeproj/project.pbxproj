@@ -54,6 +54,7 @@
 		AB34F30318915BE9005E030B /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AB34F2EB18915BE9005E030B /* tabBar-camera.png */; };
 		AB34F30418915BE9005E030B /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB34F2EC18915BE9005E030B /* tabBar-camera@2x.png */; };
 		AB34F30518915BE9005E030B /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB34F2EE18915BE9005E030B /* MenuBackground@2x.png */; };
+		AB34F30818915CF4005E030B /* XHBaseCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		AB34F2EB18915BE9005E030B /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera.png"; sourceTree = "<group>"; };
 		AB34F2EC18915BE9005E030B /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera@2x.png"; sourceTree = "<group>"; };
 		AB34F2EE18915BE9005E030B /* MenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuBackground@2x.png"; sourceTree = "<group>"; };
+		AB34F30618915CF4005E030B /* XHBaseCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseCameraViewController.h; sourceTree = "<group>"; };
+		AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				AB34F2C318915B29005E030B /* XHBaseViewController.m */,
 				AB34F2C418915B29005E030B /* XHRootViewController.h */,
 				AB34F2C518915B29005E030B /* XHRootViewController.m */,
+				AB34F30618915CF4005E030B /* XHBaseCameraViewController.h */,
+				AB34F30718915CF4005E030B /* XHBaseCameraViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				AB34F2D218915B9E005E030B /* UINavigationController+XHNavigationControllerHiddenShowBug.m in Sources */,
 				AB34F2D018915B9E005E030B /* UIButton+XHImageTextPosition.m in Sources */,
 				AB34F2D118915B9E005E030B /* UIDevice+XHDevices.m in Sources */,
+				AB34F30818915CF4005E030B /* XHBaseCameraViewController.m in Sources */,
 				AB34F2C818915B29005E030B /* XHRootViewController.m in Sources */,
 				AB34F2B7189158BC005E030B /* XHItemScrollToolBar.m in Sources */,
 			);
