@@ -10,13 +10,21 @@
 
 #import "XHPhotoEditorViewController.h"
 
-@interface XHCartoonCameraViewController ()
+#import "QBImagePickerController.h"
+
+@interface XHCartoonCameraViewController () <QBImagePickerControllerDelegate>
 
 @end
 
 @implementation XHCartoonCameraViewController
 
 #pragma mark - Action
+
+- (void)_pushLibrarySelectViewController {
+    QBImagePickerController *imagePickerController = [[QBImagePickerController alloc] init];
+    imagePickerController.delegate = self;
+    [self.navigationController presentModalViewController:[[UINavigationController alloc] initWithRootViewController:imagePickerController] animated:YES];
+}
 
 - (void)_pushPhotoEditorViewController {
     XHPhotoEditorViewController *photoEditorViewController = [[XHPhotoEditorViewController alloc] init];
@@ -39,17 +47,21 @@
         [weakSelf.navigationController popViewControllerAnimated:YES];
         NSLog(@"index : %d", itemView.item.index);
     }];
+    backToRootItem.unHieghtSelect = YES;
     [items addObject:backToRootItem];
     
     XHItem *libraryItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
         NSLog(@"index : %d", itemView.item.index);
+        [weakSelf _pushLibrarySelectViewController];
     }];
+    libraryItem.unHieghtSelect = YES;
     [items addObject:libraryItem];
     
     XHItem *capturePhotoItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
         [weakSelf _pushPhotoEditorViewController];
         NSLog(@"index : %d", itemView.item.index);
     }];
+    capturePhotoItem.unHieghtSelect = YES;
     [items addObject:capturePhotoItem];
     
     XHItem *scenesItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
@@ -86,7 +98,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+
     [self _setupItemScrollToolBar];
 }
 
@@ -94,6 +106,29 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - QBImagePickerControllerDelegate
+
+- (void)_dismissImagePickerController
+{
+    if (self.presentedViewController) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    } else {
+        [self.navigationController popToViewController:self animated:YES];
+    }
+}
+
+- (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets {
+    [self _dismissImagePickerController];
+}
+
+- (void)imagePickerController:(QBImagePickerController *)imagePickerController didSelectAsset:(ALAsset *)asset {
+    [self _dismissImagePickerController];
+}
+
+- (void)imagePickerControllerDidCancel:(QBImagePickerController *)imagePickerController {
+    [self _dismissImagePickerController];
 }
 
 @end

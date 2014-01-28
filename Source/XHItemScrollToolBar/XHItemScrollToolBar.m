@@ -58,15 +58,19 @@
 }
 
 - (void)itemViewClicked:(XHItemView *)itemView {
+    if (itemView.item.itemSelectedCompled) {
+        itemView.item.itemSelectedCompled(itemView);
+    }
+    if (itemView.item.unHieghtSelect)
+        return;
     for (XHItemView *_itemView in self.itemViews) {
         if (itemView == _itemView) {
-            _itemView.selected = YES;
+            if (!itemView.item.unHieghtSelect) {
+                _itemView.selected = YES;
+            }
         } else {
             _itemView.selected = NO;
         }
-    }
-    if (itemView.item.itemSelectedCompled) {
-        itemView.item.itemSelectedCompled(itemView);
     }
 }
 

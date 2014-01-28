@@ -52,10 +52,10 @@
             return @"漫画场景";
             break;
         case kXHFilter:
-            return @"漫画布景";
+            return nil;
             break;
         case kXHElements:
-            return @"漫画元素";
+            return @"漫画布景";
             break;
         case kXHDialogBox:
             return @"对话框";
@@ -77,12 +77,13 @@
         [weakSelf.navigationController popViewControllerAnimated:YES];
         NSLog(@"index : %d", itemView.item.index);
     }];
+    backToRootItem.unHieghtSelect = YES;
     [items addObject:backToRootItem];
     
     XHItem *scenesItem = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"] selectedImage:[UIImage imageNamed:@"tabBar-camera-on"] title:nil itemSelectedBlcok:^(XHItemView *itemView) {
         NSInteger index = itemView.item.index;
         NSLog(@"index : %d", index);
-        [weakSelf _filterEdting:index - 1];
+        [weakSelf _filterEdting:index];
     }];
     [items addObject:scenesItem];
     
@@ -104,6 +105,7 @@
         [weakSelf _pushXHShareViewController];
         NSLog(@"index : %d", itemView.item.index);
     }];
+    gotoNextSetpItem.unHieghtSelect = YES;
     [items addObject:gotoNextSetpItem];
     self.items = items;
 }
@@ -111,6 +113,7 @@
 #pragma mark - Life cycle
 
 - (void)_setup {
+    self.cameraType = kXHSceces;
     self.selectIndex = 1;
 }
 

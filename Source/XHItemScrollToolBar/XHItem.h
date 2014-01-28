@@ -12,6 +12,7 @@
 typedef void(^XHItemSelectedBlcok)(XHItemView *itemView);
 
 @interface XHItem : NSObject
+@property (nonatomic, assign) BOOL unHieghtSelect;
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, readonly) UIImage *selectedImage;
 @property (nonatomic, readonly) UIImage *normalImage;
